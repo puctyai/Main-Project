@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec ="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<div th:insert="links/links.html"></div>
+<div th:insert="links/nav.html"></div>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+<form action="/logout" method="post">
+    <button>Log out</button>
+</form>
+<form action="/change-password" method="post">
+    <input type="password" name="currentPass"> <br>
+    <input type="password" name="newPass"> <br>
+    <input type="password" name="reNewPass"> <br>
+    <button>Change Password</button>
+
+</form>
+
+</div>
+</body>
+</html>

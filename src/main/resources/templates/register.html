@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div th:insert="links/links.html"></div>
+    <div th:insert="links/nav.html"></div>
+</head>
+<body>
+<div class="container">
+    <div>
+        <div th:if="${param.SuccessAddUser !=null}" class="alert alert-warning alert-dismissible fade show bg-success color-dark" role="alert">
+            <strong>ADDED USER!</strong> Профиль добавлен!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <div th:if="${param.EmailNotValid !=null}" class="alert alert-warning alert-dismissible fade show bg-danger color-dark" role="alert">
+            <strong>EMAIL NOT VALID!</strong> Такой пользователь существует!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <div th:if="${param.PasswordIncorrect !=null}" class="alert alert-warning alert-dismissible fade show bg-danger color-dark" role="alert">
+            <strong>PASSWORD INCORRECT!</strong> Один из паролей не правильный!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+    <form action="/register" method="post">
+        <table class="m-3 margin: auto table table-striped table-bordered">
+            <tr>
+                <td>Логин:</td>
+                <td> <input type="text" name="email"> <br></td>
+            </tr>
+            <tr>
+                <td>Имя и Фамилия</td>
+                <td> <input type="text" name="full_name"> <br></td>
+            </tr>
+            <tr>
+                <td>Пароль:</td>
+                <td>  <input type="password" name="password"> </td>
+            </tr>
+            <tr>
+                <td>Повторить пароль:</td>
+                <td>   <input type="password" name="rePassword">  </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btn btn-sm btn-success">Регистрация</button>
+                </td>
+            </tr>
+
+
+        </table>
+    </form>
+
+</div>
+
+
+
+
+
+</body>
+</html>

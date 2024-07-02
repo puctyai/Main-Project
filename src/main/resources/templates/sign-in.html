@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<div th:insert="links/links.html"></div>
+<div th:insert="links/nav.html"></div>
+<body>
+<form action="/auth" method="post">
+    <table class="m-3  margin: auto table table-striped table-bordered">
+        <tr>
+            <td>Логин:</td>
+            <td> <input type="text" name="email"> <br></td>
+        </tr>
+        <tr>
+            <td>Пароль:</td>
+            <td>  <input type="password" name="password"> </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="btn btn-sm btn-success">Вход</button>
+            </td>
+        </tr>
+
+
+    </table>
+
+</form>
+</body>
+</html>
